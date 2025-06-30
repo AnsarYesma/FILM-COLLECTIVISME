@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILM-COLLECTIVISM</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #4d5549;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+        
+        .quote {
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            border-left: 4px solid #4d5549;
+            padding-left: 20px;
+        }
+        
+        .topic {
+            text-align: center;
+            font-weight: bold;
+            color: #4d5549;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        h2 {
+            color: #4d5549;
+            border-bottom: 2px solid #4d5549;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h3 {
+            color: #4d5549;
+            margin-top: 25px;
+        }
+        
+        ul {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #4d5549;
+        }
+        
+        .contact-info h3 {
+            margin-top: 0;
+            color: #4d5549;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .form-link {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .form-link a {
+            display: inline-block;
+            background-color: #4d5549;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .form-link a:hover {
+            background-color: #3a4137;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            margin: 8px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #4d5549;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-color: #4d5549;
+            background: linear-gradient(135deg, #4d5549 0%, #3a4137 100%);
+            color: white;
+        }
+        
+        .contact-link:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-link:hover:before {
+            opacity: 1;
+        }
+        
+        .contact-link.telegram:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234d5549'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.06-.06-.14-.04-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z'/%3E%3C/svg%3E");
+        }
+        
+        .contact-link.instagram:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234d5549'%3E%3Cpath d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/%3E%3C/svg%3E");
+        }
+        
+        .contact-link.letterboxd:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234d5549'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3E%3C/svg%3E");
+        }
+        
+        .contact-link.email:before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234d5549'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+        }
+        
+        .contact-link strong {
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .contact-link span {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FILM-COLLECTIVISM</h1>
+<div class="quote">
+    "Only that which is lost is ever possessed." — Walter Benjamin
+</div>
+
+<!-- <div class="topic">
+    This quote is your topic. Interpret it however you wish.
+</div> -->
+        <h2>Purpose</h2>
+        <p>This is a collective filmmaking experiment. You are one link in a long chain. The camera has passed through many hands before yours—and will pass through many more. Each person contributes a short film, forming a fragmented whole, authored by no one and by everyone.</p>
+
+        <h2>What You Must Do</h2>
+        
+        <h3>1. Shoot a short video (2–5 minutes).</h3>
+        <ul>
+            <li>Interpret the <b>quote</b> however you wish.</li>
+            <li>Be artistically independent. You are not continuing someone else's story. This is not a collaboration—it is a co-existence.</li>
+        </ul>
+        
+        <h3>2. Respect the timeline.</h3>
+        <ul>
+            <li>You may keep the camera for no more than 7 days. Sooner is better.</li>
+            <li>When finished, pass it to someone you trust. No strangers, no randomness. Pass to someone who will take it seriously.</li>
+        </ul>
+        
+        <h3>3. You are part of a disappearing chain.</h3>
+        <ul>
+            <li>If you are the 12th person to receive this camera, you must return it. Contact the original owner using the information in the camera pouch or QR link.</li>
+            <li>If memory is almost full, return it early. Do not erase others' work.</li>
+        </ul>
+        
+        <h3>4. Do not delete or alter previous material.</h3>
+        <ul>
+            <li>Every piece, no matter how raw, is part of the experiment. Do not edit, rename, or judge others' footage.</li>
+            <li>Do not watch it unless you must for technical reasons.</li>
+        </ul>
+        
+        <h3>5. Follow basic ethics.</h3>
+        <ul>
+            <li>No filming anyone without consent.</li>
+            <li>No footage that puts people at legal or personal risk.</li>
+            <li>No hate speech, pornography, or propaganda.</li>
+            <li>Be honest, but not careless.</li>
+        </ul>
+        
+        <h3>6. Crossing borders is allowed.</h3>
+        <ul>
+            <li>You can take the camera to a different country or region. Just respect the timeline and the trust.</li>
+        </ul>
+        
+        <h3>7. Fill out the form.</h3>
+        <ul>
+            <li>Upon receiving the camera, scan the QR code and fill out a short Google Form. This is for crediting purposes and to help track the chain. You may use an alias. No spam, no tracking.</li>
+            <li>If you refuse to be credited, you may leave the form blank, but still pass on the camera.</li>
+        </ul>
+        
+        <div class="form-link">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe6kP4zM6bSSRPMqP6LQ-VCDEvcj84IaR871SzMVpeNPRNy3g/viewform?usp=dialog" target="_blank">Fill Out Participation Form</a>
+        </div>
+        
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p><a href="https://t.me/anturgan" target="_blank" class="contact-link telegram"><strong>Telegram</strong> <span>@anturgan</span></a></p>
+            <p> <a href="https://instagram.com/anturgan" target="_blank" class="contact-link instagram"><strong>Instagram</strong> <span>@anturgan</span></a></p>
+            <p> <a href="https://letterboxd.com/anturgan" target="_blank" class="contact-link letterboxd"><strong>Letterboxd</strong> <span>@anturgan</span></a></p>
+            <p> <a href="mailto:ansar.yesmukhanov@gmail.com" class="contact-link email"><strong>Email</strong> <span>ansar.yesmukhanov@gmail.com</span></a></p>
+        </div>
+        
+        <div class="footer">
+            <p>Ansar Yesmukhanov, 2025, Kazakhstan</p>
+        </div>
+    </div>
+</body>
+</html> 
